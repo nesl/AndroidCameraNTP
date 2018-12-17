@@ -1,0 +1,4 @@
+#Sun Dec 16 21:00:25 PST 2018
+base.0=C\:\\Users\\Brian\\Documents\\UCLA\\Research\\TransientSensorRobustInference\\android-Camera2Video\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+path.0=classes.dex
+renamed.0=classes.dex
