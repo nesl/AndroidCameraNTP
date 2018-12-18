@@ -41,6 +41,7 @@ public class exporter {
 
     //Set the filename of the CSV
     public void setFileName(String filename) {
+
         mCurrentDateString = filename;
     }
 
@@ -74,15 +75,18 @@ public class exporter {
             try
             {
                 file = new File(exportDir, mCurrentDateString + ".csv");
-                file.createNewFile();
+                if(file.createNewFile()) {
+                    Log.d(TAG, "Created new file ");
+                }
 
                 //This is set in append mode - if the file already exists we append this data to it
                 printWriter = new PrintWriter(new FileWriter(file, true));
 
                 //Append the data to the file
                 long timestamp = System.currentTimeMillis();
+                //printWriter.println(video_part);
                 printWriter.println(video_part + "," + Long.toString(timestamp) + "," + Long.toString(ntpThread.getOffset()));
-                Log.d(TAG, "writing " + Long.toString(timestamp) + "," + Long.toString(ntpThread.getOffset()));
+                Log.d(TAG, "writing " + video_part + " - " + Long.toString(timestamp) + "," + Long.toString(ntpThread.getOffset()));
 
 
             }

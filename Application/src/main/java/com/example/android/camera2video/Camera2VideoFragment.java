@@ -343,8 +343,8 @@ public class Camera2VideoFragment extends Fragment
                     //We start recording the video:
                     start_time = System.currentTimeMillis();
                     Log.d(TAG, "START TIME: " + start_time);
-                    exp.exportData("start");
                     startRecordingVideo();
+                    exp.exportData("start");
                 }
                 break;
             }
